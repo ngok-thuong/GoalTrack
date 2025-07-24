@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Roadmap</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .roadmap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: 120px repeat(7, 1fr);
+            gap: 1px;
+            background: #f0f0f0;
+            margin: 0;
+        }
+        
+        .time-slot, .day-header, .activity {
+            padding: 12px 8px;
+            background: white;
+            text-align: center;
+            font-size: 0.85em;
+        }
+        
+        .day-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .time-slot {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #495057;
+            writing-mode: horizontal-tb;
+            font-size: 0.8em;
+        }
+        
+        .activity {
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .activity:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .morning { border-left-color: #ff9a9e; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+        .work { border-left-color: #667eea; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; }
+        .study { border-left-color: #4facfe; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .break { border-left-color: #ffeaa7; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+        .evening { border-left-color: #fd79a8; background: linear-gradient(135deg, #fdcbf1 0%, #fdcbf1 100%); }
+        .sleep { border-left-color: #6c5ce7; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+        .weekend { border-left-color: #00b894; background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%); }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .schedule-grid {
+                font-size: 0.7em;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .roadmap-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="roadmap-container">
+        <div class="header">
+            <h1>🗓️ Lộ Trình Tuần Học Tập & Làm Việc</h1>
+            <p>Kế hoạch hàng ngày để phát triển bản thân</p>
+        </div>
+        
+        <div class="schedule-grid">
+            <div class="time-slot"></div>
+            <div class="day-header">T2</div>
+            <div class="day-header">T3</div>
+            <div class="day-header">T4</div>
+            <div class="day-header">T5</div>
+            <div class="day-header">T6</div>
+            <div class="day-header">T7</div>
+            <div class="day-header">CN</div>
+            
+            <div class="time-slot">05:45-06:00</div>
+            <div class="activity morning">🌅 Dậy + vệ sinh + tĩnh nguyện sáng</div>
+            <div class="activity morning">🌅 Dậy + vệ sinh + tĩnh nguyện sáng</div>
+            <div class="activity morning">🌅 Dậy + vệ sinh + tĩnh nguyện sáng</div>
+            <div class="activity morning">🌅 Dậy + vệ sinh + tĩnh nguyện sáng</div>
+            <div class="activity morning">🌅 Dậy + vệ sinh + tĩnh nguyện sáng</div>
+            <div class="activity morning">🌅 Dậy + vệ sinh + tĩnh nguyện sáng</div>
+            <div class="activity weekend">😴 Ngủ thêm hoặc tĩnh nguyện sáng</div>
+            
+            <div class="time-slot">06:00-07:00</div>
+            <div class="activity study">📚 IELTS (Từ vựng + Nghe)</div>
+            <div class="activity study">🗣️ IELTS (Nói Part 1–2)</div>
+            <div class="activity study">✍️ IELTS (Ngữ pháp + Viết đoạn)</div>
+            <div class="activity study">👂 IELTS (Nghe + Từ vựng)</div>
+            <div class="activity study">📖 IELTS (Đọc + phân tích từ)</div>
+            <div class="activity study">🎤 IELTS (Nói + ghi âm)</div>
+            <div class="activity weekend">😌 Nghỉ / Tự học nhẹ</div>
+            
+            <div class="time-slot">07:00-08:00</div>
+            <div class="activity break">🍳 Ăn sáng + Chuẩn bị đi làm</div>
+            <div class="activity break">🍳 Ăn sáng + Chuẩn bị đi làm</div>
+            <div class="activity break">🍳 Ăn sáng + Chuẩn bị đi làm</div>
+            <div class="activity break">🍳 Ăn sáng + Chuẩn bị đi làm</div>
+            <div class="activity break">🍳 Ăn sáng + Chuẩn bị đi làm</div>
+            <div class="activity weekend">🍳 Ăn sáng + dọn dẹp nhẹ nhàng</div>
+            <div class="activity weekend">🍳 Ăn sáng / nghỉ ngơi</div>
+            
+            <div class="time-slot">08:00-12:00</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity weekend">🧹 Dọn dẹp, đọc sách nhẹ</div>
+            <div class="activity weekend">🎯 Nghỉ ngơi, hoạt động tự do</div>
+            
+            <div class="time-slot">12:00-13:00</div>
+            <div class="activity break">🍽️ Nghỉ trưa + 💤 Ngủ 20 phút</div>
+            <div class="activity break">🍽️ Nghỉ trưa + 💤 Ngủ 20 phút</div>
+            <div class="activity break">🍽️ Nghỉ trưa + 💤 Ngủ 20 phút</div>
+            <div class="activity break">🍽️ Nghỉ trưa + 💤 Ngủ 20 phút</div>
+            <div class="activity break">🍽️ Nghỉ trưa + 💤 Ngủ 20 phút</div>
+            <div class="activity weekend">🍽️ Nghỉ trưa</div>
+            <div class="activity weekend">🍽️ Nghỉ trưa</div>
+            
+            <div class="time-slot">13:00-14:00</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity weekend">🎵 Nghỉ trưa / Chuẩn bị học drum</div>
+            <div class="activity weekend">😌 Nghỉ ngơi tự do</div>
+            
+            <div class="time-slot">14:00-17:30</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity work">🧑‍💻 Làm việc</div>
+            <div class="activity weekend">🎵 Học drum (offline)</div>
+            <div class="activity weekend">☕ Nghỉ ngơi / Cafe</div>
+            
+            <div class="time-slot">18:00-19:00</div>
+            <div class="activity break">🍽️ Ăn tối + nghỉ ngơi</div>
+            <div class="activity break">🍽️ Ăn tối + nghỉ ngơi</div>
+            <div class="activity break">🍽️ Ăn tối + nghỉ ngơi</div>
+            <div class="activity break">🍽️ Ăn tối + nghỉ ngơi</div>
+            <div class="activity break">🍽️ Ăn tối + nghỉ ngơi</div>
+            <div class="activity break">🍽️ Ăn tối + nghỉ ngơi</div>
+            <div class="activity break">🍽️ Ăn tối + nghỉ ngơi</div>
+            
+            <div class="time-slot">19:00-20:30</div>
+            <div class="activity evening">⛓️ Blockchain Academy (video + lab)</div>
+            <div class="activity evening">✍️ IELTS Viết Task 2</div>
+            <div class="activity evening">⛓️ Blockchain (lab nhỏ)</div>
+            <div class="activity evening">🗣️ IELTS Speaking + shadowing</div>
+            <div class="activity evening">⛓️ Blockchain nâng cao</div>
+            <div class="activity evening">📝 Full test Listening + Reading</div>
+            <div class="activity weekend">⛪ Nhà thờ / Nghỉ ngơi</div>
+            
+            <div class="time-slot">20:30-21:30</div>
+            <div class="activity evening">📚 IELTS luyện đề / sửa lỗi</div>
+            <div class="activity evening">📖 Tự ôn lại</div>
+            <div class="activity evening">📝 IELTS Grammar</div>
+            <div class="activity evening">⛓️ Blockchain review</div>
+            <div class="activity evening">📋 Tổng ôn tuần</div>
+            <div class="activity evening">✍️ Viết bài luận (Task 2)</div>
+            <div class="activity weekend">🎉 Đi chơi / Thư giãn</div>
+            
+            <div class="time-slot">21:30-22:00</div>
+            <div class="activity evening">📚 Đọc sách</div>
+            <div class="activity evening">📚 Đọc sách</div>
+            <div class="activity evening">📚 Đọc sách</div>
+            <div class="activity evening">📚 Đọc sách</div>
+            <div class="activity evening">📚 Đọc sách</div>
+            <div class="activity evening">📚 Đọc sách</div>
+            <div class="activity evening">📚 Đọc sách</div>
+            
+            <div class="time-slot">22:00-05:45</div>
+            <div class="activity sleep">😴 Ngủ đủ 6h30p</div>
+            <div class="activity sleep">😴 Ngủ đủ 6h30p</div>
+            <div class="activity sleep">😴 Ngủ đủ 6h30p</div>
+            <div class="activity sleep">😴 Ngủ đủ 6h30p</div>
+            <div class="activity sleep">😴 Ngủ đủ 6h30p</div>
+            <div class="activity sleep">😴 Ngủ đủ 6h30p</div>
+            <div class="activity sleep">😴 Ngủ đủ 6h30p</div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color morning"></div>
+                <span>🌅 Sáng sớm</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color work"></div>
+                <span>💼 Công việc</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color study"></div>
+                <span>📚 Học tập</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color break"></div>
+                <span>🍽️ Nghỉ ngơi</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color evening"></div>
+                <span>🌆 Tối (Học thêm)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color sleep"></div>
+                <span>😴 Ngủ nghỉ</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color weekend"></div>
+                <span>🎯 Cuối tuần</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
